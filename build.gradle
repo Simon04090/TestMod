@@ -53,6 +53,7 @@ configFile.withReader {
     prop.load(it)
     project.ext.config = new ConfigSlurper().parse prop
     version = project.config.minecraft_version + "-" + project.config.major_version + "." + project.config.minor_version + "." + project.config.build_number
+	minecraft.version = project.config.minecraft_version + "-" + project.config.forge_version
 }
 
 processResources
@@ -60,7 +61,8 @@ processResources
 	dependsOn "incrementBuildNumber"
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'       
+        include 'mcmod.info' 
+			expand 'version':project.version, 'mcversion':project.minecraft.version
     }
         
     // copy everything else, thats not the mcmod.info

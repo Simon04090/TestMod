@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Test",
+  "name": "Test",
+  "description": "Test mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["Simon04090"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
