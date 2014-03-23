@@ -11,41 +11,36 @@ import de.Simon04090.Test.Proxies.CommonProxy;
 import de.Simon04090.Test.Utilis.LogHelper;
 
 @Mod(modid = Test.modid, version = Test.version, name = "Test")
-
 public class Test {
-	
+
 	public static final String modid = "Test";
 	private static final String mcversion = "1.7.2";
 	private static final String majorversion = "0";
 	private static final String minorversion = "1";
 	private static final String buildnumber = "1";
-	public static final String version = mcversion + "." + majorversion + "." + minorversion  + "." + buildnumber;
-	
-	@Instance (value = modid)
+	public static final String version = mcversion + "." + majorversion + "."
+			+ minorversion + "." + buildnumber;
+
+	@Instance(value = modid)
 	public static Test instance;
-	
-	@SidedProxy (clientSide = "de.Simon04090.Test.Proxies.ClientProxy", serverSide = "de.Simon04090.Test.Proxies.CommonProxy")
+
+	@SidedProxy(clientSide = "de.Simon04090.Test.Proxies.ClientProxy", serverSide = "de.Simon04090.Test.Proxies.CommonProxy")
 	public static CommonProxy proxy;
-	
+
 	@EventHandler
-	public void preInit (FMLPreInitializationEvent event){	
+	public void preInit(FMLPreInitializationEvent event) {
 	}
-	
+
 	@EventHandler
-	public void Init (FMLInitializationEvent event){
+	public void Init(FMLInitializationEvent event) {
 		proxy.registerRenderes();
 		Recipes.addShpedReceipe();
 		Recipes.addShapelessRecipes();
 		Recipes.addFurnaceRecipes();
 		LogHelper.addloginfo("All Recipes were succesful loaded!");
-	
 	}
-	
-	
+
 	@EventHandler
-	public void postInit (FMLPostInitializationEvent event){
-		
+	public void postInit(FMLPostInitializationEvent event) {
 	}
-	
-	
 }
