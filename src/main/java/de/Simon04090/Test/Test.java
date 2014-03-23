@@ -8,6 +8,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import de.Simon04090.Test.Proxies.CommonProxy;
+import de.Simon04090.Test.Utilis.LogHelper;
 
 @Mod(modid = Test.modid, version = Test.version, name = "Test")
 
@@ -33,7 +34,10 @@ public class Test {
 	@EventHandler
 	public void Init (FMLInitializationEvent event){
 		proxy.registerRenderes();
-		
+		Recipes.addShpedReceipe();
+		Recipes.addShapelessRecipes();
+		Recipes.addFurnaceRecipes();
+		LogHelper.addloginfo("All Recipes were succesful loaded!");
 	
 	}
 	
