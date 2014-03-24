@@ -1,4 +1,4 @@
-package de.Simon04090.Test;
+package de.simon04090.test;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -7,8 +7,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import de.Simon04090.Test.Proxies.CommonProxy;
-import de.Simon04090.Test.Utilis.LogHelper;
+import de.simon04090.test.proxy.CommonProxy;
+import de.simon04090.test.util.LogHelper;
 
 @Mod(modid = Test.modid, version = Test.version, name = "Test")
 public class Test {
@@ -24,11 +24,15 @@ public class Test {
 	@Instance(value = modid)
 	public static Test instance;
 
-	@SidedProxy(clientSide = "de.Simon04090.Test.Proxies.ClientProxy", serverSide = "de.Simon04090.Test.Proxies.CommonProxy")
+	@SidedProxy(clientSide = "de.simon04090.test.proxy.ClientProxy", serverSide = "de.simon04090.test.proxy.CommonProxy")
 	public static CommonProxy proxy;
+
+	
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		
+		
 	}
 
 	@EventHandler

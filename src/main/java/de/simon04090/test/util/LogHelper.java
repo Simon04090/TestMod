@@ -1,9 +1,9 @@
-package de.Simon04090.Test.Utilis;
+package de.simon04090.test.util;
 
 import org.apache.logging.log4j.Level;
 
 import cpw.mods.fml.common.FMLLog;
-import de.Simon04090.Test.Test;
+import de.simon04090.test.Test;
 
 public class LogHelper {
 	public static void addLog(Level level, String message, Object... data) {

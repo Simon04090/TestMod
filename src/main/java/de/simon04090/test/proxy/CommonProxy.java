@@ -1,4 +1,4 @@
-package de.Simon04090.Test.Proxies;
+package de.simon04090.test.proxy;
 
 public class CommonProxy {
 	public void registerRenderes() {

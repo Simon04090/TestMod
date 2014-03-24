@@ -1,4 +1,4 @@
-package de.Simon04090.Test;
+package de.simon04090.test;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

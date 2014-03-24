@@ -1,4 +1,4 @@
-package de.Simon04090.Test.Proxies;
+package de.simon04090.test.proxy;
 
 public class ClientProxy extends CommonProxy {
 	@Override
